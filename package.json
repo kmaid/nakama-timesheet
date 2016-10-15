@@ -13,7 +13,10 @@
     "jspdf": "https://github.com/MrRio/jsPDF/archive/v1.3.2.tar.gz"
   },
   "devDependencies": {
+    "css-loader": "^0.25.0",
     "gulp": "^3.9.1",
-    "webpack": "^1.13.2"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-stream": "^3.2.0"
   }
 }

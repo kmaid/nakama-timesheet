@@ -2,13 +2,18 @@
   "name": "nakama-timesheet",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jspdf": "https://github.com/MrRio/jsPDF/archive/v1.3.2.tar.gz"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "webpack": "^1.13.2"
   }
 }

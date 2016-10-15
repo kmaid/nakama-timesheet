@@ -6,3 +6,8 @@ gulp.task('default', function() {
         .pipe(webpack(require('./webpack.config.js')))
         .pipe(gulp.dest('.'));
 });
+
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+    gulp.watch('src/**/*.js', ['default']);
+});

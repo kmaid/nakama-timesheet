@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jspdf": "https://github.com/MrRio/jsPDF/archive/v1.3.2.tar.gz"
+    "datauri": "^1.0.4",
+    "jspdf": "https://github.com/MrRio/jsPDF/archive/v1.3.2.tar.gz",
+    "pdf-image": "^1.1.0"
   },
   "devDependencies": {
     "css-loader": "^0.25.0",

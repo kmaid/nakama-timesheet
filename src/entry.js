@@ -1,7 +1,7 @@
 require("./css/main.css");
-require('../node_modules/jspdf/dist/jspdf.debug.js');
-require('../node_modules/jspdf/libs/png_support/zlib.js');
-require('../node_modules/jspdf/libs/png_support/png.js');
+require('../node_modules/jspdf/dist/jspdf.min');
+// require('../node_modules/jspdf/libs/png_support/zlib.js');
+// require('../node_modules/jspdf/libs/png_support/png.js');
 
 console.log();
 var doc = new jsPDF();

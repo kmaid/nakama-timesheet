@@ -46,10 +46,9 @@
 
 	__webpack_require__(1);
 	var doc = new jsPDF("l");
-	console.log(jsPDF);
 	doc.setFontSize(40);
-	doc.text(35, 25, "Octonyan loves jsPDF");
 	doc.addImage(__webpack_require__(5), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
+	doc.text(35, 25, "Octonyan loves jsPDF");
 	doc.save("test.pdf");
 
 /***/ },

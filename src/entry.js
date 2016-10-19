@@ -3,10 +3,8 @@ require('../node_modules/jspdf/dist/jspdf.min');
 // require('../node_modules/jspdf/libs/png_support/zlib.js');
 // require('../node_modules/jspdf/libs/png_support/png.js');
 
-console.log();
-var doc = new jsPDF();
+var doc = new jsPDF("l");
 
 doc.setFontSize(40);
 doc.text(35, 25, "Octonyan loves jsPDF");
-doc.addImage(require('./js/timesheet-london'), 'png', 0, 0);
-console.log('hit');
+doc.addImage(require('./js/timesheet-london'), 'jpg', 0, 0);

@@ -11,7 +11,13 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "datauri": "^1.0.4",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.43",
+    "expose-loader": "^0.7.1",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.1",
     "jspdf": "https://github.com/MrRio/jsPDF/archive/v1.3.2.tar.gz",
+    "lodash": "^4.16.4",
+    "moment": "^2.15.1",
     "pdf-image": "^1.1.0"
   },
   "devDependencies": {

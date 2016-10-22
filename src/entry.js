@@ -1,4 +1,23 @@
 require("./css/main.css");
+require("../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css");
+window.$.fn.datetimepicker = require('eonasdan-bootstrap-datetimepicker');
+
+window.$("#weeklyDatePicker").datetimepicker({
+    format: 'DD-MM-YYYY'
+});
+
+//Get the value of Start and End of Week
+window.$('#weeklyDatePicker').on('dp.change', function (e) {
+    value = global.$("#weeklyDatePicker").val();
+    firstDate = moment(value, 'DD-MM-YYYY').day(0).format('DD-MM-YYYY');
+    lastDate =  moment(value, 'DD-MM-YYYY').day(6).format('DD-MM-YYYY');
+    global.$("#weeklyDatePicker").val(firstDate + "   -   " + lastDate);
+});
+
+
+
+
+
 var doc = new jsPDF("l");
 doc.setFontSize(10);
 doc.addImage(require('./js/timesheet-london'), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
@@ -9,8 +28,8 @@ doc.text(41, 74.5, "0123456789");
 doc.text(44, 82, "01/02/66");
 doc.text(48, 90, "12345678");
 
-doc.text(76.5, 105, "X");
-doc.text(93.2, 105, "X");
+doc.text(76.5, 105, "X"); //no
+doc.text(93.2, 105, "X"); //yes
 
 doc.setFontSize(8);
 doc.text(132, 58.4, "10 20 30");
@@ -46,6 +65,6 @@ doc.text(201.2, 97.5, "1 00");
 doc.text(201.2, 105.4, "1 00");
 
 
-doc.output('datauri');
+ doc.output('datauri');
 
 // doc.save("test.pdf");

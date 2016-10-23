@@ -11723,7 +11723,7 @@
 	
 	
 	// module
-	exports.push([module.id, "h4 {\n    margin-top: 25px;\n}\n.row {\n    margin-bottom: 20px;\n}\n.row .row {\n    margin-top: 10px;\n    margin-bottom: 0;\n}\n[class*=\"col-\"] {\n    padding-top: 15px;\n    padding-bottom: 15px;\n    background-color: #eee;\n    background-color: rgba(86,61,124,.15);\n    border: 1px solid rgba(86,61,124,.2);\n}\n\nhr {\n    margin-top: 40px;\n    margin-bottom: 40px;\n}\n\n.bootstrap-datetimepicker-widget tr:hover {\n    background-color: #808080;\n}", ""]);
+	exports.push([module.id, "", ""]);
 	
 	// exports
 

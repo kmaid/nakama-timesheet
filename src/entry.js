@@ -4,7 +4,7 @@ require("flatpickr/dist/flatpickr.min.css");
 require('font-awesome/css/font-awesome.css');
 
 $( document ).ready(function() {
-    flatpickr(document.getElementById("flatpickr"), {});
+    flatpickr(document.getElementById("week-commencing"), {});
 });
 
 

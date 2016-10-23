@@ -15,19 +15,19 @@ module.exports = {
                 loader: "style!css"
             }, {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
+                loader: "url?limit=10000&mimetype=application/font-woff&name=./dist/[hash].[ext]"
             }, {
                 test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
+                loader: "url?limit=10000&mimetype=application/font-woff&name=./dist/[hash].[ext]"
             }, {
                 test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/octet-stream"
+                loader: "url?limit=10000&mimetype=application/octet-stream&name=./dist/[hash].[ext]"
             }, {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "file"
+                loader: "file?name=./dist/[hash].[ext]"
             }, {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=image/svg+xml"
+                loader: "url?limit=10000&mimetype=image/svg+xml&name=./dist/[hash].[ext]"
             }
         ]
     },

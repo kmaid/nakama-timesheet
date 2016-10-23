@@ -10,4 +10,5 @@ gulp.task('default', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
     gulp.watch('src/**/*.js', ['default']);
+    gulp.watch('src/**/*.css', ['default']);
 });

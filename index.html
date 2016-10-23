@@ -17,17 +17,23 @@
 </head>
 <body>
 <div class="container">
-    <img width="352" height="82" src="dist/logo.jpg"/>
+    <h1>
+        <a href="http://serversurge.co.uk">
+            <img alt="Server Surge" src="dist/logo.jpg"/>
+        </a>
+    </h1>
+    <h2>
     <div class="page-header">
-        <p class="lead">Generate a Nakama London timesheet!</p>
+        <p class="lead">Generate Nakama London timesheets!</p>
     </div>
+    </h2>
     <form class="form-horizontal">
         <div class="row">
             <!-- Week input-->
-            <div class="col-md-6 form-group">
+            <div class="col-xs-6 form-group">
                 <label class="control-label" for="week-commencing">Week commencing</label>
                 <div class='col-md-12 input-group add-on date datepicker' data-date-format="yyyy-mm-dd">
-                    <input id="week-commencing" name='name' value="" type="text" class="form-control date-picker" />
+                    <input id="week-commencing" name='name'  type="text" class="form-control date-picker" />
                     <div class="input-group-btn">
                         <button class="btn btn-default">
                             <i class="fa fa-calendar"></i>
@@ -38,7 +44,7 @@
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-6 control-label" for="client">Client</label>
+                <label class="col-xs-6 control-label" for="client">Client</label>
                 <div class="col-md-6">
                     <input id="client" name="client" type="text" placeholder="Server Surge LTD" class="form-control input-md" required="">
                 </div>

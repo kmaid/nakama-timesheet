@@ -2,9 +2,12 @@ require("./css/main.css");
 var flatpickr = require("flatpickr");
 require("flatpickr/dist/flatpickr.min.css");
 require('font-awesome/css/font-awesome.css');
-
+var moment = require('moment');
+console.log(moment().startOf('week'));
 $( document ).ready(function() {
-    flatpickr(document.getElementById("week-commencing"), {});
+    flatpickr(document.getElementById("week-commencing"), {
+        "defaultDate": moment().startOf('week').toDate()
+    });
 });
 
 

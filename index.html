@@ -26,13 +26,68 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6 form-group">
-                <div class="input-group" id="DateDemo">
-                    <input type='text' id='weeklyDatePicker' placeholder="Select Week" />
-                </div>
+
+        <div class='input-group add-on col-md-2 date datepicker'
+             data-date-format="yyyy-mm-dd">
+            <input id="flatpickr" placeholder="Pick week" name='name' value="" type="text" class="form-control date-picker" />
+            <div class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="fa fa-calendar"></i>
+                </button>
             </div>
         </div>
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Form Name</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="first-name">First Name</label>
+                    <div class="col-md-4">
+                        <input id="first-name" name="first-name" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="last-name">Last Name</label>
+                    <div class="col-md-4">
+                        <input id="last-name" name="last-name" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Text Input</label>
+                    <div class="col-md-4">
+                        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                        <span class="help-block">help</span>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="client">Client</label>
+                    <div class="col-md-4">
+                        <input id="client" name="client" type="text" placeholder="Company you work for" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+                    <div class="col-md-4">
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
 
     <h3>Three equal columns</h3>
     <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>

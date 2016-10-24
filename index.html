@@ -22,60 +22,85 @@
             <img alt="Server Surge" src="dist/logo.jpg"/>
         </a>
     </h1>
-    <h2>
-    <div class="page-header">
-        <p class="lead">Generate Nakama London timesheets!</p>
-    </div>
-    </h2>
     <form class="form-horizontal">
         <div class="row">
             <!-- Week input-->
-            <div class="col-xs-6 form-group">
-                <label class="control-label" for="week-commencing">Week commencing</label>
-                <div class='col-md-12 input-group add-on date datepicker' data-date-format="yyyy-mm-dd">
-                    <input id="week-commencing" name='name'  type="text" class="form-control date-picker" />
-                    <div class="input-group-btn">
-                        <button class="btn btn-default">
-                            <i class="fa fa-calendar"></i>
-                        </button>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <label class="control-label" for="week-commencing">Week commencing</label>
+                    <div class='input-group add-on date datepicker' data-date-format="yyyy-mm-dd">
+                        <input id="week-commencing" name='name'  type="text" class="form-control date-picker" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-default">
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-xs-6 control-label" for="client">Client</label>
-                <div class="col-md-6">
+            <div class="col-md-6">
+                <div class="form-group col-md-12">
+                    <label class="control-label" for="client">Client</label>
                     <input id="client" name="client" type="text" placeholder="Server Surge LTD" class="form-control input-md" required="">
                 </div>
             </div>
-
         </div>
         <div class="row">
             <!-- Text input-->
-            <div class="col-md-6 form-group">
-                <label class="control-label" for="first-name">First Name</label>
-                <input id="first-name" name="first-name" type="text" placeholder="John" class="form-control input-md" required="">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <label class="control-label" for="first-name">First Name</label>
+                    <input id="first-name" name="first-name" type="text" placeholder="John" class="form-control input-md" required="">
+                </div>
             </div>
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-6 control-label" for="last-name">Last Name</label>
-                <div class="col-md-6">
+            <div class="col-md-6">
+                <div class="form-group col-md-12">
+                    <label class="control-label" for="last-name">Last Name</label>
                     <input id="last-name" name="last-name" type="text" placeholder="Smith" class="form-control input-md" required="">
-
                 </div>
             </div>
         </div>
 
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput">Text Input</label>
-            <div class="col-md-4">
-                <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-                <span class="help-block">help</span>
+        <div class="row">
+            <!-- Text input-->
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <label class="control-label" for="manager-name">Manager's Name</label>
+                    <input id="manager-name" name="manager-name" type="text" placeholder="Jane Roe" class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="col-md-6">
+                <div class="form-group col-md-12">
+                    <label class="control-label" for="manager-telephone">Manager's Telephone</label>
+                    <input id="manager-telephone" name="manager-telephone" type="text" placeholder="0123456789" class="form-control input-md" required="">
+                </div>
             </div>
         </div>
+
+        <div class="row">
+            <!-- Text input-->
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <label class="control-label" for="first-name">Purchase Order Number</label>
+                    <input id="purchase-number" name="manager-name" type="text" placeholder="Jane Roe" class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="col-md-6">
+                <div class="form-group col-md-12">
+                    <label class="control-label" for="assignment-continue">Assignment will continue</label>
+                    <select class="form-control" id="assignment-continue">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Button -->
         <div class="form-group">

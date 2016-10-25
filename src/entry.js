@@ -6,7 +6,9 @@ require('font-awesome/css/font-awesome.css');
 var flatpickr = require("flatpickr");
 var moment = require('moment');
 var jsPDF = require('jspdf');
+global.Tether = require('tether');
 var bootstrap = require('bootstrap');
+
 
 $( document ).ready(function() {
     flatpickr(document.getElementById("week-commencing"), {

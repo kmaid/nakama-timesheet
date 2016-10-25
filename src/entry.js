@@ -1,9 +1,13 @@
+require('bootstrap/dist/css/bootstrap.css');
 require("./css/main.css");
-var flatpickr = require("flatpickr");
 require("flatpickr/dist/flatpickr.min.css");
 require('font-awesome/css/font-awesome.css');
+
+var flatpickr = require("flatpickr");
 var moment = require('moment');
-console.log(moment().startOf('week'));
+var jsPDF = require('jspdf');
+var bootstrap = require('bootstrap');
+
 $( document ).ready(function() {
     flatpickr(document.getElementById("week-commencing"), {
         "defaultDate": moment().startOf('week').toDate()

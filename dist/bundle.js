@@ -12078,7 +12078,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\n    background-color: #6589B4;\n}\nbody,html {\n    height:100%;\n}\n.container {\n    background-color: white;\n    /*min-height: 100%;*/\n    height: 100%;\n}", ""]);
+	exports.push([module.id, "body {\n    background-color: #6589B4;\n}\n.container {\n    background-color: white\n}", ""]);
 	
 	// exports
 

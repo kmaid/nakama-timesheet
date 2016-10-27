@@ -36,7 +36,13 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            mangle: {
+            except: ['$', 'exports', 'require']
+        }}),
+        new webpack.optimize.DedupePlugin(),
+        
     ],
     resolve: {
         alias: {

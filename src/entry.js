@@ -3,7 +3,7 @@ require("./css/main.css");
 require("flatpickr/dist/flatpickr.min.css");
 require('font-awesome/css/font-awesome.css');
 
-var flatpickr = require("flatpickr");
+const flatpickr = require("flatpickr");
 var moment = require('moment');
 var jsPDF = require('jspdf');
 global.Tether = require('tether');
@@ -11,7 +11,7 @@ var bootstrap = require('bootstrap');
 
 
 $( document ).ready(function() {
-    flatpickr(document.getElementById("week-commencing"), {
+    new flatpickr(document.getElementById("week-commencing"), {
         "defaultDate": moment().startOf('week').toDate()
     });
 });
@@ -19,7 +19,7 @@ $( document ).ready(function() {
 var generatePDF = function() {
     var doc = new jsPDF("l");
     doc.setFontSize(10);
-    doc.addImage(require.include('./js/timesheet-london'), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
+    // doc.addImage(require.include('./js/timesheet-london'), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
     doc.text(28, 50.5, "Thomas Waterfall");
     doc.text(33, 59, "Never Bland");
     doc.text(36, 66.5, "Annika Hart");

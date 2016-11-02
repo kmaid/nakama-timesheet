@@ -37,11 +37,11 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            mangle: {
-            except: ['$', 'exports', 'require']
-        }}),
-        new webpack.optimize.DedupePlugin(),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     mangle: {
+        //     except: ['$', 'exports', 'require']
+        // }}),
+        // new webpack.optimize.DedupePlugin(),
         
     ],
     resolve: {

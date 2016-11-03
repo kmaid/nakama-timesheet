@@ -11,8 +11,9 @@ var bootstrap = require('bootstrap');
 
 
 $( document ).ready(function() {
-    new flatpickr(document.getElementById("week-commencing"), {
-        "defaultDate": moment().startOf('week').toDate()
+    new flatpickr(document.getElementById("test"), {
+        "defaultDate": moment().startOf('week').toDate(),
+        wrap: true
     });
 });
 

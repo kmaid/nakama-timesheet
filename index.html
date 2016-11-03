@@ -29,10 +29,10 @@
             <div class="form-group col-md-6">
                 <div class="col-md-12">
                     <label class="control-label" for="week-commencing">Week commencing</label>
-                    <div class='input-group add-on date datepicker' data-date-format="yyyy-mm-dd">
-                        <input id="week-commencing" name='name'  type="text" class="form-control date-picker" />
+                    <div id="test" class='input-group add-on date datepicker' >
+                        <input id="week-commencing" name='name' type="text" data-date-format="yyyy-mm-dd" class="form-control date-picker" data-input />
                         <div class="input-group-btn">
-                            <button class="btn btn-default">
+                            <button type="button" class="btn btn-default" data-toggle>
                                 <i class="fa fa-calendar"></i>
                             </button>
                         </div>
@@ -105,7 +105,7 @@
                 <thead cl>
                 <tr>
                     <th>Day</th>
-                    <th>Default</th>
+                    <th></th>
                     <th>Start</th>
                     <th>Finish</th>
                     <th>Lunch</th>
@@ -118,8 +118,8 @@
                 <tr>
                     <th scope="row">Default</th>
                     <td></td>
-                    <td><input id="start_d" name="start_d" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_d" name="finish_d" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><input id="start_d" name="start_d" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_d" name="finish_d" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_d" name="lunch_d" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_d" name="regular_d" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_d" name="overtime_d" type=time step=900 class="form-control input-md" required=""></td>
@@ -127,9 +127,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Sunday</th>
-                    <td><input id="default_0" class="form-check-input" type="checkbox"></td>
-                    <td><input id="start_0" name="start_0" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_0" name="finish_0" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_0" class="form-check-input" type="checkbox"></label></div></td>
+                    <td><input id="start_0" name="start_0" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_0" name="finish_0" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_0" name="lunch_0" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_0" name="regular_0" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_0" name="overtime_0" type=time step=900 class="form-control input-md" required=""></td>
@@ -137,9 +137,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Monday</th>
-                    <td><input id="default_1" class="form-check-input" type="checkbox" checked="checked"></td>
-                    <td><input id="start_1" name="start_1" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_1" name="finish_1" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_1" class="form-check-input" type="checkbox" checked="checked"></label></div></td>
+                    <td><input id="start_1" name="start_1" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_1" name="finish_1" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_1" name="lunch_1" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_1" name="regular_1" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_1" name="overtime_1" type=time step=900 class="form-control input-md" required=""></td>
@@ -147,9 +147,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Tuesday</th>
-                    <td><input id="default_2" class="form-check-input" type="checkbox" checked="checked"></td>
-                    <td><input id="start_2" name="start_2" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_2" name="finish_2" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_2" class="form-check-input" type="checkbox" checked="checked"></label></div></td>
+                    <td><input id="start_2" name="start_2" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_2" name="finish_2" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_2" name="lunch_2" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_2" name="regular_2" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_2" name="overtime_2" type=time step=900 class="form-control input-md" required=""></td>
@@ -157,9 +157,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Wednesday</th>
-                    <td><input id="default_3" class="form-check-input" type="checkbox" checked="checked"></td>
-                    <td><input id="start_3" name="start_3" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_3" name="finish_3" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_3" class="form-check-input" type="checkbox" checked="checked"></label></div></td>
+                    <td><input id="start_3" name="start_3" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_3" name="finish_3" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_3" name="lunch_3" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_3" name="regular_3" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_3" name="overtime_3" type=time step=900 class="form-control input-md" required=""></td>
@@ -167,9 +167,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Thursday</th>
-                    <td><input id="default_4" class="form-check-input" type="checkbox" checked="checked"></td>
-                    <td><input id="start_4" name="start_4" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_4" name="finish_4" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_4" class="form-check-input" type="checkbox" checked="checked"></label></div></td>
+                    <td><input id="start_4" name="start_4" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_4" name="finish_4" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_4" name="lunch_4" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_4" name="regular_4" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_4" name="overtime_4" type=time step=900 class="form-control input-md" required=""></td>
@@ -177,9 +177,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Friday</th>
-                    <td><input id="default_5" class="form-check-input" type="checkbox" checked="checked"></td>
-                    <td><input id="start_5" name="start_5" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_5" name="finish_5" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_5" class="form-check-input" type="checkbox" checked="checked"></label></div></td>
+                    <td><input id="start_5" name="start_5" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_5" name="finish_5" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
                     <td><input id="lunch_5" name="lunch_5" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_5" name="regular_5" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_5" name="overtime_5" type=time step=900 class="form-control input-md" required=""></td>
@@ -187,9 +187,9 @@
                 </tr>
                 <tr>
                     <th scope="row">Saturday</th>
-                    <td><input id="default_6" class="form-check-input" type="checkbox"></td>
-                    <td><input id="start_6" name="start_6" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
-                    <td><input id="finish_6" name="finish_6" type=time step=900 class="form-control input-md flatpickr" data-date-format="h:i K" required=""></td>
+                    <td><div class="form-check text-md-center"><label class="form-check-label"><input id="default_6" class="form-check-input" type="checkbox"></label></div></td>
+                    <td><input id="start_6" name="start_6" type=time step=900 class="form-control input-md" data-date-format="h:i K" required=""></td>
+                    <td><input id="finish_6" name="finish_6" type=time step=900 class="form-control input-md" data-dat  e-format="h:i K" required=""></td>
                     <td><input id="lunch_6" name="lunch_6" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="regular_6" name="regular_6" type=time step=900 class="form-control input-md" required=""></td>
                     <td><input id="overtime_6" name="overtime_6" type=time step=900 class="form-control input-md" required=""></td>

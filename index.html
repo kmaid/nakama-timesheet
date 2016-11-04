@@ -8,8 +8,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-
-   <script src="dist/bundle.js"></script>
+    <script src="node_modules/drmonty-garlicjs/js/garlic.min.js"></script>
+    <script src="dist/bundle.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -23,7 +23,7 @@
             <img alt="Server Surge" class="pb-1 pt-2" src="dist/logo.jpg"/>
         </a>
     </h1>
-    <form class="form-horizontal">
+    <form class="form-horizontal" data-destroy="false" data-persist="garlic"  id="timesheet">
         <div class="row">
             <!-- Week input-->
             <div class="form-group col-md-6">

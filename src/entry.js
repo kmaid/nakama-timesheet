@@ -9,12 +9,12 @@ var jsPDF = require('jspdf');
 global.Tether = require('tether');
 var bootstrap = require('bootstrap');
 
-
 $( document ).ready(function() {
     new flatpickr(document.getElementById("test"), {
         "defaultDate": moment().startOf('week').toDate(),
         wrap: true
     });
+    $( 'form' ).garlic();
 });
 
 var generatePDF = function() {

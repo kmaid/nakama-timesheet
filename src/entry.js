@@ -19,7 +19,6 @@ $( document ).ready(function() {
 
 global.generatePDF = function(view = false) {
     var startOfWeek = moment(document.getElementById("week-commencing").value).startOf('week');
-
     var doc = new jsPDF("l");
     doc.setFontSize(10);
     doc.addImage(require('./js/timesheet-london'), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
@@ -27,7 +26,7 @@ global.generatePDF = function(view = false) {
     doc.text(33, 59, document.getElementById('client').value);
     doc.text(36, 66.5, document.getElementById('manager-name').value);
     doc.text(41, 74.5, document.getElementById('manager-telephone').value);
-    doc.text(44, 82, document.getElementById("week-commencing").value);
+    doc.text(44, 82, startOfWeek.clone().add(7,'Day').format('DD/MM/YYYY'));
     doc.text(48, 90, document.getElementById("purchase-number").value);
     if(document.getElementById('assignment-continue').value) {
         doc.text(76.5, 105, "X"); //no
@@ -36,8 +35,8 @@ global.generatePDF = function(view = false) {
     }
 
     doc.setFontSize(8);
-    var yCord = [58.4, 66.5, 74.2, 81.8, 89.4, 97.5, 105.4];
-    for (var day=0; day<=6; day++) {
+    var yCord = [null, 58.4, 66.5, 74.2, 81.8, 89.4, 97.5, 105.4]; //end on Sunday
+    for (var day=1; day<=7; day++) {
         var date = startOfWeek.clone().add(day, 'day');
         doc.text(132, yCord[day], date.format('DD MM YY'));
         doc.text(157.4, yCord[day], document.getElementById('start_'+day).value);

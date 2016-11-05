@@ -16,7 +16,9 @@ $( document ).ready(function() {
     });
 });
 
-global.generatePDF = function(download = false) {
+global.generatePDF = function(view = false) {
+    var startOfWeek = moment(document.getElementById("week-commencing").value).startOf('week');
+
     var doc = new jsPDF("l");
     doc.setFontSize(10);
     doc.addImage(require('./js/timesheet-london'), 'jpg', 0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height);
@@ -26,7 +28,6 @@ global.generatePDF = function(download = false) {
     doc.text(41, 74.5, document.getElementById('manager-telephone').value);
     doc.text(44, 82, document.getElementById("week-commencing").value);
     doc.text(48, 90, document.getElementById("purchase-number").value);
-
     if(document.getElementById('assignment-continue').value) {
         doc.text(76.5, 105, "X"); //no
     } else {
@@ -35,16 +36,19 @@ global.generatePDF = function(download = false) {
 
     doc.setFontSize(8);
     var yCord = [58.4, 66.5, 74.2, 81.8, 89.4, 97.5, 105.4];
-    for (var day=0; day<6; day++) {
-        console.log(day);
-        for (var y=0; y<yCord.length; y++) {
-            doc.text(132, yCord[y], "10 20 30");
-            doc.text(157.5, yCord[y], "9 30");
-            doc.text(179, yCord[y], "6 30");
-            doc.text(201.2, yCord[y], "1 00");
-        }
+    y=0;
+    for (var day=0; day<=6; day++) {
+        var date = startOfWeek.clone().add(day, 'day');
+        doc.text(132, yCord[y], date.format('DD MM YY'));
+        doc.text(157.4, yCord[y], document.getElementById('start_'+day).value);
+        doc.text(178.9, yCord[y], document.getElementById('finish_'+day).value);
+        doc.text(201, yCord[y], document.getElementById('lunch_'+day).value);
+        doc.text(222, yCord[y], document.getElementById('regular_'+day).value);
+        doc.text(244, yCord[y], document.getElementById('overtime_'+day).value);
+        doc.text(266, yCord[y], document.getElementById('other_'+day).value);
+        y++;
     }
+    if (view) doc.output('datauri');
+    else doc.save("timesheet-"+document.getElementById("week-commencing").value+".pdf");
 
-    if (download) doc.output('datauri');
-    else doc.save("Timesheet-"+document.getElementById("week-commencing").value+".pdf");
 };

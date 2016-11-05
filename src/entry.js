@@ -2,6 +2,7 @@ require('bootstrap/dist/css/bootstrap.css');
 require("./css/main.css");
 require("flatpickr/dist/flatpickr.min.css");
 require('font-awesome/css/font-awesome.css');
+require('drmonty-garlicjs');
 
 const flatpickr = require("flatpickr");
 var moment = require('moment');
@@ -36,17 +37,15 @@ global.generatePDF = function(view = false) {
 
     doc.setFontSize(8);
     var yCord = [58.4, 66.5, 74.2, 81.8, 89.4, 97.5, 105.4];
-    y=0;
     for (var day=0; day<=6; day++) {
         var date = startOfWeek.clone().add(day, 'day');
-        doc.text(132, yCord[y], date.format('DD MM YY'));
-        doc.text(157.4, yCord[y], document.getElementById('start_'+day).value);
-        doc.text(178.9, yCord[y], document.getElementById('finish_'+day).value);
-        doc.text(201, yCord[y], document.getElementById('lunch_'+day).value);
-        doc.text(222, yCord[y], document.getElementById('regular_'+day).value);
-        doc.text(244, yCord[y], document.getElementById('overtime_'+day).value);
-        doc.text(266, yCord[y], document.getElementById('other_'+day).value);
-        y++;
+        doc.text(132, yCord[day], date.format('DD MM YY'));
+        doc.text(157.4, yCord[day], document.getElementById('start_'+day).value);
+        doc.text(178.9, yCord[day], document.getElementById('finish_'+day).value);
+        doc.text(201, yCord[day], document.getElementById('lunch_'+day).value);
+        doc.text(222, yCord[day], document.getElementById('regular_'+day).value);
+        doc.text(243, yCord[day], document.getElementById('overtime_'+day).value);
+        doc.text(265, yCord[day], document.getElementById('other_'+day).value);
     }
     if (view) doc.output('datauri');
     else doc.save("timesheet-"+document.getElementById("week-commencing").value+".pdf");

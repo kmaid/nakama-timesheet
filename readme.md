@@ -1,5 +1,7 @@
 # Nakama Timesheet
-A project to automatically fill in the UK Nakama timesheet as a downloadable PDF and details will be stored for future timesheets.
+Generates Nakama London timesheets remembering working hours, contract details and updating working dates! This project uses bootstrap 4, webpack, yarn, jspdf.
+
+[Live Demo](http://nakama.serversurge.co.uk)
 
 ## Requirements:
 ```

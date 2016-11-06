@@ -1,9 +1,9 @@
 # Nakama Timesheet
-Generates Nakama London timesheets remembering working hours, contract details and updating working dates! This project uses bootstrap 4, webpack, yarn, jspdf.
+Generates Nakama London timesheets remembering working hours, contract details and updating working dates! This project uses bootstrap 4, webpack, yarn, jspdf.   
 
 [Live Demo](http://nakama.serversurge.co.uk)
 
-## Requirements:
+## Requirements to generate datauri from PDF:
 ```
 sudo apt-get install npm nodejs imagemagick ghostscript poppler-utils
 ```

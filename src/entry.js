@@ -28,12 +28,11 @@ global.generatePDF = function(view = false) {
     doc.text(41, 74.5, document.getElementById('manager-telephone').value);
     doc.text(44, 82, startOfWeek.clone().add(7,'Day').format('DD/MM/YYYY'));
     doc.text(48, 90, document.getElementById("purchase-number").value);
-    if(document.getElementById('assignment-continue').value) {
-        doc.text(76.5, 105, "X"); //no
+    if(document.getElementById('assignment-continue').value == "1") {
+        doc.text(76.5, 105, "X");
     } else {
-        doc.text(93.2, 105, "X"); //yes
+        doc.text(93.2, 105, "X");
     }
-
     doc.setFontSize(8);
     var yCord = [null, 58.4, 66.5, 74.2, 81.8, 89.4, 97.5, 105.4]; //end on Sunday
     for (var day=1; day<=7; day++) {
@@ -48,5 +47,4 @@ global.generatePDF = function(view = false) {
     }
     if (view) doc.output('datauri');
     else doc.save("timesheet-"+document.getElementById("week-commencing").value+".pdf");
-
 };
